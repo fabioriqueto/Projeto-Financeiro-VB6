@@ -1,0 +1,582 @@
+VERSION 5.00
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "MSMASK32.OCX"
+Begin VB.Form Calculotroca 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "Calculo para troca de cheque                       *** Megatron ***"
+   ClientHeight    =   3465
+   ClientLeft      =   3045
+   ClientTop       =   2190
+   ClientWidth     =   5985
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   ScaleHeight     =   3465
+   ScaleWidth      =   5985
+   Begin VB.Frame Frame2 
+      Caption         =   "Resultado Troca de Cheques"
+      Height          =   1095
+      Left            =   120
+      TabIndex        =   18
+      Top             =   2280
+      Visible         =   0   'False
+      Width           =   5775
+      Begin MSMask.MaskEdBox MaskEdBox10 
+         Height          =   375
+         Left            =   3600
+         TabIndex        =   19
+         Top             =   600
+         Width           =   2055
+         _ExtentX        =   3625
+         _ExtentY        =   661
+         _Version        =   327680
+         Enabled         =   0   'False
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   "$#,##0.00;($#,##0.00)"
+         PromptChar      =   "_"
+      End
+      Begin MSMask.MaskEdBox MaskEdBox9 
+         Height          =   255
+         Left            =   4440
+         TabIndex        =   20
+         Top             =   240
+         Width           =   1215
+         _ExtentX        =   2143
+         _ExtentY        =   450
+         _Version        =   327680
+         Enabled         =   0   'False
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   "$#,##0.00;($#,##0.00)"
+         PromptChar      =   "_"
+      End
+      Begin MSMask.MaskEdBox MaskEdBox8 
+         Height          =   255
+         Left            =   600
+         TabIndex        =   21
+         Top             =   240
+         Width           =   855
+         _ExtentX        =   1508
+         _ExtentY        =   450
+         _Version        =   327680
+         Enabled         =   0   'False
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   "$#,##0.00;($#,##0.00)"
+         PromptChar      =   "_"
+      End
+      Begin MSMask.MaskEdBox MaskEdBox7 
+         Height          =   255
+         Left            =   2640
+         TabIndex        =   22
+         Top             =   240
+         Width           =   735
+         _ExtentX        =   1296
+         _ExtentY        =   450
+         _Version        =   327680
+         Enabled         =   0   'False
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Format          =   "$#,##0.00;($#,##0.00)"
+         PromptChar      =   "_"
+      End
+      Begin VB.Label Label5 
+         Caption         =   "CPMF 0,30%:"
+         Height          =   255
+         Left            =   1560
+         TabIndex        =   26
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.Label Label7 
+         Caption         =   "Juros:"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   25
+         Top             =   240
+         Width           =   495
+      End
+      Begin VB.Label Label8 
+         Caption         =   "Desc. Total:"
+         Height          =   255
+         Left            =   3480
+         TabIndex        =   24
+         Top             =   240
+         Width           =   975
+      End
+      Begin VB.Label Label9 
+         Caption         =   "Valor Liquido:"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   13.5
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00000000&
+         Height          =   375
+         Left            =   1440
+         TabIndex        =   23
+         Top             =   600
+         Width           =   2055
+      End
+   End
+   Begin MSMask.MaskEdBox MaskEdBox6 
+      Height          =   255
+      Left            =   1080
+      TabIndex        =   5
+      Top             =   1920
+      Width           =   615
+      _ExtentX        =   1085
+      _ExtentY        =   450
+      _Version        =   327680
+      Format          =   "0"
+      PromptChar      =   "_"
+   End
+   Begin MSMask.MaskEdBox MaskEdBox5 
+      Height          =   255
+      Left            =   1200
+      TabIndex        =   17
+      Top             =   1560
+      Width           =   3255
+      _ExtentX        =   5741
+      _ExtentY        =   450
+      _Version        =   327680
+      Enabled         =   0   'False
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   "dddddd"
+      PromptChar      =   "_"
+   End
+   Begin VB.CommandButton Command1 
+      BackColor       =   &H00C0C0C0&
+      Caption         =   "Calcular"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   24
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   1095
+      Left            =   120
+      TabIndex        =   10
+      Top             =   2280
+      Width           =   5775
+   End
+   Begin MSMask.MaskEdBox MaskEdBox3 
+      Height          =   255
+      Left            =   1800
+      TabIndex        =   2
+      Top             =   480
+      Width           =   2655
+      _ExtentX        =   4683
+      _ExtentY        =   450
+      _Version        =   327680
+      Format          =   "#,##0.000;(#,##0.000)"
+      PromptChar      =   "_"
+   End
+   Begin MSMask.MaskEdBox MaskEdBox2 
+      Height          =   255
+      Left            =   1200
+      TabIndex        =   4
+      Top             =   1200
+      Width           =   3255
+      _ExtentX        =   5741
+      _ExtentY        =   450
+      _Version        =   327680
+      Format          =   "dddddd"
+      PromptChar      =   "_"
+   End
+   Begin MSMask.MaskEdBox MaskEdBox1 
+      Height          =   255
+      Left            =   1200
+      TabIndex        =   1
+      Top             =   120
+      Width           =   3255
+      _ExtentX        =   5741
+      _ExtentY        =   450
+      _Version        =   327680
+      Format          =   "dddddd"
+      PromptChar      =   "_"
+   End
+   Begin VB.Frame Frame1 
+      Caption         =   "Compensação"
+      Height          =   1815
+      Left            =   4560
+      TabIndex        =   13
+      Top             =   0
+      Width           =   1335
+      Begin VB.OptionButton Option4 
+         Caption         =   "Comp. D4"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   9
+         Top             =   1440
+         Width           =   1095
+      End
+      Begin VB.OptionButton Option3 
+         Caption         =   "Comp. D3"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   8
+         Top             =   1080
+         Width           =   1095
+      End
+      Begin VB.OptionButton Option2 
+         Caption         =   "Comp. D2"
+         Height          =   255
+         Left            =   120
+         TabIndex        =   7
+         Top             =   720
+         Value           =   -1  'True
+         Width           =   1095
+      End
+      Begin VB.OptionButton Option1 
+         Caption         =   "Isento"
+         ForeColor       =   &H000040C0&
+         Height          =   255
+         Left            =   120
+         TabIndex        =   6
+         Top             =   360
+         Width           =   855
+      End
+   End
+   Begin MSMask.MaskEdBox MaskEdBox4 
+      Height          =   255
+      Left            =   1800
+      TabIndex        =   3
+      Top             =   840
+      Width           =   2655
+      _ExtentX        =   4683
+      _ExtentY        =   450
+      _Version        =   327680
+      AutoTab         =   -1  'True
+      OLEDragMode     =   1
+      Format          =   "$#,##0.00;($#,##0.00)"
+      PromptChar      =   "_"
+      OLEDragMode     =   1
+   End
+   Begin VB.Label Label10 
+      Caption         =   "Compensação:"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   16
+      Top             =   1560
+      Width           =   1095
+   End
+   Begin VB.Label Label6 
+      Caption         =   "Cheque pré p/:"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   15
+      Top             =   1200
+      Width           =   1215
+   End
+   Begin VB.Label Label4 
+      Caption         =   "QTD. Dias:"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   14
+      Top             =   1920
+      Width           =   1095
+   End
+   Begin VB.Label Label3 
+      Caption         =   "Valor do documento:"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   12
+      Top             =   840
+      Width           =   1575
+   End
+   Begin VB.Label Label2 
+      Caption         =   "Taxa de Juros mensal:"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   11
+      Top             =   480
+      Width           =   1695
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Data Inicial:"
+      Height          =   255
+      Left            =   120
+      TabIndex        =   0
+      Top             =   120
+      Width           =   975
+   End
+End
+Attribute VB_Name = "Calculotroca"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+'Dim juros1 As Integer
+'Dim juros2 As Integer
+'Dim doc1 As Integer
+Dim dias1 As Integer
+Dim dias2 As Integer
+Dim semana1 As String
+Dim semana2 As String
+Dim ww As String
+
+Private Sub Command1_Click()
+semana1 = Left(MaskEdBox2.FormattedText, 7)
+If semana1 = "Sábado," Then MaskEdBox2 = CDate(MaskEdBox2) + 2
+If semana1 = "Domingo" Then MaskEdBox2 = CDate(MaskEdBox2) + 1
+MaskEdBox6 = (CDate(MaskEdBox2) + 1) - CDate(MaskEdBox1)
+MaskEdBox2 = (CDate(MaskEdBox1) - 1) + MaskEdBox6
+If Option1 = True Then MaskEdBox5 = CDate(MaskEdBox2)
+If Option2 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 2
+If Option3 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 3
+If Option4 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 4
+semana2 = Left(MaskEdBox5.FormattedText, 7)
+If Option2 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option3 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option4 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Terça-f" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+End If
+dias2 = CDate(MaskEdBox5) - (CDate(MaskEdBox1) - 1)
+juros3 = Val(MaskEdBox3.FormattedText) / 30
+juros3 = juros3 * dias2
+MaskEdBox7 = MaskEdBox4 * 0.003
+MaskEdBox8 = MaskEdBox4 * (juros3 / 100)
+MaskEdBox9 = (MaskEdBox4 * (juros3 / 100)) + (MaskEdBox4 * 0.003)
+MaskEdBox10 = MaskEdBox4 - MaskEdBox9
+Command1.Visible = False
+Frame2.Visible = True
+End Sub
+
+Private Sub Form_Activate()
+MaskEdBox1 = Date
+MaskEdBox2 = Date
+MaskEdBox3 = 0
+MaskEdBox4 = 0
+MaskEdBox6 = (CDate(MaskEdBox2) + 1) - CDate(MaskEdBox1)
+MaskEdBox7 = 0
+End Sub
+
+Private Sub MaskEdBox1_Change()
+If MaskEdBox1.FormattedText = "" Then MaskEdBox1 = Date
+Command1.Visible = True
+Frame2.Visible = False
+End Sub
+
+Private Sub MaskEdBox2_Change()
+If MaskEdBox2.FormattedText = "" Then MaskEdBox2 = Date
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
+
+Private Sub MaskEdBox3_Change()
+If MaskEdBox3.FormattedText = "" Then MaskEdBox3 = 0
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
+
+Private Sub MaskEdBox4_Change()
+If MaskEdBox4.FormattedText = "" Then MaskEdBox4 = 0
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
+
+Private Sub MaskEdBox6_Change()
+If MaskEdBox6.FormattedText = "" Then MaskEdBox6 = 0
+MaskEdBox2 = (CDate(MaskEdBox1) - 1) + MaskEdBox6
+Command1.Visible = True
+Frame2.Visible = False
+End Sub
+
+Private Sub Option1_Click()
+semana1 = Left(MaskEdBox2.FormattedText, 7)
+If semana1 = "Sábado," Then MaskEdBox2 = CDate(MaskEdBox2) + 2
+If semana1 = "Domingo" Then MaskEdBox2 = CDate(MaskEdBox2) + 1
+MaskEdBox6 = (CDate(MaskEdBox2) + 1) - CDate(MaskEdBox1)
+MaskEdBox2 = (CDate(MaskEdBox1) - 1) + MaskEdBox6
+If Option1 = True Then MaskEdBox5 = CDate(MaskEdBox2)
+If Option2 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 2
+If Option3 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 3
+If Option4 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 4
+semana2 = Left(MaskEdBox5.FormattedText, 7)
+If Option2 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option3 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option4 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Terça-f" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+End If
+dias2 = CDate(MaskEdBox5) - (CDate(MaskEdBox1) - 1)
+juros3 = Val(MaskEdBox3.FormattedText) / 30
+juros3 = juros3 * dias2
+MaskEdBox7 = MaskEdBox4 * 0.003
+MaskEdBox8 = MaskEdBox4 * (juros3 / 100)
+MaskEdBox9 = (MaskEdBox4 * (juros3 / 100)) + (MaskEdBox4 * 0.003)
+MaskEdBox10 = MaskEdBox4 - MaskEdBox9
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
+
+Private Sub Option2_Click()
+semana1 = Left(MaskEdBox2.FormattedText, 7)
+If semana1 = "Sábado," Then MaskEdBox2 = CDate(MaskEdBox2) + 2
+If semana1 = "Domingo" Then MaskEdBox2 = CDate(MaskEdBox2) + 1
+MaskEdBox6 = (CDate(MaskEdBox2) + 1) - CDate(MaskEdBox1)
+MaskEdBox2 = (CDate(MaskEdBox1) - 1) + MaskEdBox6
+If Option1 = True Then MaskEdBox5 = CDate(MaskEdBox2)
+If Option2 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 2
+If Option3 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 3
+If Option4 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 4
+semana2 = Left(MaskEdBox5.FormattedText, 7)
+If Option2 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option3 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option4 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Terça-f" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+End If
+dias2 = CDate(MaskEdBox5) - (CDate(MaskEdBox1) - 1)
+juros3 = Val(MaskEdBox3.FormattedText) / 30
+juros3 = juros3 * dias2
+MaskEdBox7 = MaskEdBox4 * 0.003
+MaskEdBox8 = MaskEdBox4 * (juros3 / 100)
+MaskEdBox9 = (MaskEdBox4 * (juros3 / 100)) + (MaskEdBox4 * 0.003)
+MaskEdBox10 = MaskEdBox4 - MaskEdBox9
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
+
+Private Sub Option3_Click()
+semana1 = Left(MaskEdBox2.FormattedText, 7)
+If semana1 = "Sábado," Then MaskEdBox2 = CDate(MaskEdBox2) + 2
+If semana1 = "Domingo" Then MaskEdBox2 = CDate(MaskEdBox2) + 1
+MaskEdBox6 = (CDate(MaskEdBox2) + 1) - CDate(MaskEdBox1)
+MaskEdBox2 = (CDate(MaskEdBox1) - 1) + MaskEdBox6
+If Option1 = True Then MaskEdBox5 = CDate(MaskEdBox2)
+If Option2 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 2
+If Option3 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 3
+If Option4 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 4
+semana2 = Left(MaskEdBox5.FormattedText, 7)
+If Option2 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option3 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option4 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Terça-f" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+End If
+dias2 = CDate(MaskEdBox5) - (CDate(MaskEdBox1) - 1)
+juros3 = Val(MaskEdBox3.FormattedText) / 30
+juros3 = juros3 * dias2
+MaskEdBox7 = MaskEdBox4 * 0.003
+MaskEdBox8 = MaskEdBox4 * (juros3 / 100)
+MaskEdBox9 = (MaskEdBox4 * (juros3 / 100)) + (MaskEdBox4 * 0.003)
+MaskEdBox10 = MaskEdBox4 - MaskEdBox9
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
+
+Private Sub Option4_Click()
+semana1 = Left(MaskEdBox2.FormattedText, 7)
+If semana1 = "Sábado," Then MaskEdBox2 = CDate(MaskEdBox2) + 2
+If semana1 = "Domingo" Then MaskEdBox2 = CDate(MaskEdBox2) + 1
+MaskEdBox6 = (CDate(MaskEdBox2) + 1) - CDate(MaskEdBox1)
+MaskEdBox2 = (CDate(MaskEdBox1) - 1) + MaskEdBox6
+If Option1 = True Then MaskEdBox5 = CDate(MaskEdBox2)
+If Option2 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 2
+If Option3 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 3
+If Option4 = True Then MaskEdBox5 = CDate(MaskEdBox2) + 4
+semana2 = Left(MaskEdBox5.FormattedText, 7)
+If Option2 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option3 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+ElseIf Option4 = True Then
+   If semana2 = "Domingo" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Sábado," Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Segunda" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+   If semana2 = "Terça-f" Then MaskEdBox5 = CDate(MaskEdBox5) + 2
+End If
+dias2 = CDate(MaskEdBox5) - (CDate(MaskEdBox1) - 1)
+juros3 = Val(MaskEdBox3.FormattedText) / 30
+juros3 = juros3 * dias2
+MaskEdBox7 = MaskEdBox4 * 0.003
+MaskEdBox8 = MaskEdBox4 * (juros3 / 100)
+MaskEdBox9 = (MaskEdBox4 * (juros3 / 100)) + (MaskEdBox4 * 0.003)
+MaskEdBox10 = MaskEdBox4 - MaskEdBox9
+Command1.Visible = True
+Frame2.Visible = False
+
+End Sub
