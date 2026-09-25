@@ -1,17 +1,3 @@
-<div style="display: inline_block" align="center"><br> 
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsOzgv8ivi-kF-J5qYb5kWRfB94Wl6jQvjn3bO4C1AOVaPSAwwFNz33_Noghhlt_0zO6I&usqp=CAU" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/ubuntu-color-icon.png" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Microsoft_Access_2013-2019_logo.svg" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" />
-<img align="center" alt="FabioAndroid" height="50" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" />     
-<img align="center" alt="FabioAndroid" height="20" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
-<img align="center" alt="FabioAndroid" height="20" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-<img align="center" alt="FabioAndroid" height="20" width"40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-</div>
-
 # 💼 Sistema Financeiro — Visual Basic 6
 
 Sistema desenvolvido por **Fábio Alexandre Riqueto**, originalmente no ano de **2000**, para utilização em uma instituição financeira.
@@ -125,6 +111,8 @@ Este projeto é apresentado principalmente como registro histórico e demonstra�
 
 O objetivo não é representar as tecnologias que utilizo exclusivamente no desenvolvimento atual, mas demonstrar a experiência acumulada ao longo da minha trajetória profissional e a evolução dos sistemas que desenvolvi.
 Atualmente continuo desenvolvendo projetos e estudando novas tecnologias, incluindo Python, Java, JavaScript, desenvolvimento web, bancos de dados, frameworks, engenharia de software e computação em nuvem.
+
+---
 
 ### 👨‍💻 Fábio Alexandre Riqueto
 ### Analista de Sistemas | Desenvolvedor de Software
